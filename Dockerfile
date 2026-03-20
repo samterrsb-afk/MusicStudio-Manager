@@ -10,5 +10,5 @@ WORKDIR /MusicStudio
 # Copia el proyecto desde tu máquina
 COPY . /MusicStudio
 
-# Comando por defecto al iniciar el contenedor
-CMD ["java", "src/Main.java"]
+# Añadimos -encoding utf8 para que Java entienda el español
+CMD ["sh", "-c", "javac -encoding utf8 src/*.java && java -cp src Main"]
