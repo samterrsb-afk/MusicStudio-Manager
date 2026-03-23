@@ -1,20 +1,12 @@
 public class Song {
-    private String title;
-    private String artist;
-    private int duration; // en segundos
+    // Estas son las "etiquetas" de nuestra canción favorita (Atributos)
+    String titulo;
+    String artista;
+    int duracionSegundos;
 
-    public Song(String title, String artist, int duration) {
-        this.title = title;
-        this.artist = artist;
-        this.duration = duration;
+    // Esto es lo que la canción saber hacer (Método)
+    public void reproducir(){
+        System.out.println("Reproduciendo: " +titulo + " de " + artista);
+    
     }
-
-    public void play() {
-        System.out.println("Reproduciendo: " + title + " de " + artist + " [" + duration + "s]");
-    }
-
-    // Getters y setters (opcional)
-    public String getTitle() { return title; }
-    public String getArtist() { return artist; }
-    public int getDuration() { return duration; }
 }
